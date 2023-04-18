@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+*{
+    font-family: 'Rubik', sans-serif;
+}
+
+:root{
+    --dark: #0A0A0A;
+    --amber: #FFCA47;
+    --ash: #f2f2f2;
+}
+
+/* defining global classes */
+.bg-dark{
+    background-color: var(--dark) !important;
+}
+
+.bg-amber{
+    background-color: var(--amber);
+}
+
+.bg-ash{
+    background-color: var(--ash);
+}
+
+.text-amber{
+    color: var(--amber);
+}
+
+.text-justify{
+    text-align: justify !important;
+}
+

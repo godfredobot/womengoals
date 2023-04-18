@@ -1,0 +1,52 @@
+/* // Large devices (desktops, 992px and up) */
+@media (max-width: 992px) { 
+    .aim-item-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) { 
+    .aim-item-container{
+        grid-template-columns: 1fr;
+    }
+
+    .vision-item{
+        border-radius: 5px;
+    }
+
+    .project-timeline{
+        grid-template-columns: 30px 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            "timeline-point timeline-text"
+            "timeline-point timeline-img"
+        ;
+        grid-column-gap: 3px;
+    }
+
+    .timeline-middle{
+        margin: auto;
+        height: 100%;
+    }
+
+ }
+
+
+ @media (max-width: 558px) { 
+    .timeline-img-container{
+       /* transform: scale(0.7);  */
+    }
+
+    footer ul{
+        width: 100% !important;
+    }
+
+ }
+
+ @media (max-width: 442px) { 
+    .list-group-item a{
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+ }

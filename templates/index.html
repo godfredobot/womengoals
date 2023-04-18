@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WOMENGGOALS</title>
+
+  <!-- bootstrap local link -->
+  <link rel="stylesheet" href="../static/bootstrap-5.1.3/dist/css/bootstrap.min.css">
+  <script src="../static/bootstrap-5.1.3/dist/js/bootstrap.min.js"></script>
+
+  <!----------------- bootstrap cdn ----------------->
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+
+  <!-- glidee carusel library  -->
+  <link rel="stylesheet" href="../static/css/glider.min.css">
+  <script src="../static/js/glider.min.js"></script>
+  <script src="../static/js/main.js"></script>
+
+  <!-- aos animation onscroll cdn -->
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+  <link href="../static/aos/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="../static/css/home.css" />
+  <link rel="stylesheet" href="../static/css/footer.css" />
+  <link rel="stylesheet" href="../static/css/media-queries.css" />
+
+</head>
+
+<body class=" text-white">
+  <header class="">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark opacity-75">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="..\static\assets\img\women-goals-icon.png" alt="Logo" width="45" height="45" class="" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav text-center ms-auto">
+            <li class="nav-item fw-bold ms-2">
+              <a class="nav-link px-4 px-sm-2 active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item fw-bold ms-2">
+              <a class="nav-link px-4 px-sm-2" href="#about-us">About Us</a>
+            </li>
+            <li class="nav-item fw-bold ms-2">
+              <a class="nav-link px-4 px-sm-2" href="#activities">Our Projects</a>
+            </li>
+            <li class="nav-item fw-bold ms-2">
+              <a class="nav-link px-4 px-sm-2" href="#contact-form-section">Contact Us</a>
+            </li>
+            <li class="nav-item fw-bold ms-2">
+              <a class="nav-link px-4 px-sm-2" href="/volunteer">Join Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+      <div class="container my-2 text-dark alert alert-primary alert-dismissible fixed-top " role="alert">
+        <div>{{message}}</div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <section id="hero-section">
+      <div class="d-flex justify-content-center align-items-center h-100 mx-auto container">
+        <div id="inner-hero-text-wrapper" class="text-center col-md-8 text-white"  data-aos="fade-up" data-aos-duration="1000"  data-aos-easing="ease-out" >
+          <p id="heading-text" class="lead fw-normal">
+            A volunteer group that focuses on empowering the Girl child,Women
+            with the right tools to becoming self reliant through increased
+            knowledge and skills
+          </p>
+          <a id="call-to-action-btn" class="amber-btn btn btn-outline-warning btn-lg rounded-0 p-auto" href="/volunteer">JOIN US</a>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main class="bg-dark">
+    <section id="about-us">
+      <div class="container">
+        <h2 class="text-amber text-center">About Us</h2>
+
+        <div class="row">
+          <div class="col-12 col-md-5 position-relative d-flex justify-content-center">
+            <img src="..\static\assets\img\about-us.png" alt="" width="287" height="280px" class="mw-100" />
+            <!-- <div class="position-absolute bg-amber" id="v-line"></div>
+            <div class="position-absolute bg-amber" id="h-line"></div> -->
+          </div>
+
+          <div id="about-description" class="col-12 col-md text-justify px-5 px-md-0 pt-2 pt-md-0">
+            Women Goals is a Non governmental organisation aimed to help the
+            female gender recognise their place in the society, help them
+            become who they dream of becoming and finally assisting them in
+            the little way we can. We are a volunteer group that focuses on
+            empowering the girl child, women with the right tools to becoming
+            self reliant through increased knowledge and skill This platform
+            covers a whole lot of humanitarian services such as outreach,
+            donations and educative events.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="aim" class="container">
+      <h2 class="text-amber text-center">Aims / Objections</h2>
+
+      <div class="aim-item-container">
+
+        <div class="aim-item" data-aos="fade-down-right">
+          <h4 class="text-break">Hope</h4>
+          <p>Bringing hope to underprivileged Females in our society.</p>
+        </div>
+        <div class="aim-item" data-aos="fade-down"  data-aos-delay="100">
+          <h4 class="text-break">Female Education</h4>
+          <p>
+            To provide underprivileged female children with a well-rounded
+            education.
+          </p>
+        </div>
+        <div class="aim-item" data-aos="fade-down-left"  data-aos-delay="200">
+          <h4 class="text-break">Community Service</h4>
+          <p>
+            To increase the awareness of the female child and of the need to
+            participate in community service initiatives.
+          </p>
+        </div>
+        <div class="aim-item" data-aos="fade-up-right"  data-aos-delay="300">
+          <h4 class="text-break">Leadership</h4>
+          <p>
+            To raise a generation of change agents/nation builders with good
+            leadership qualities.
+          </p>
+        </div>
+        <div class="aim-item" data-aos="fade-up"  data-aos-delay="400">
+          <h4 class="text-break">Mentorship</h4>
+          <p>
+            To provide valuable and life changing mentorship to children in
+            general both male and female.
+          </p>
+        </div>
+        <div class="aim-item" data-aos="fade-up-left"  data-aos-delay="500">
+          <h4 class="text-break">Skill Acquisition</h4>
+          <p>
+            To train as many females as we can to be independent by skill
+            acquisition
+          </p>
+        </div>
+
+      </div>
+
+      <div class="px-auto d-flex">
+        <a  class="amber-btn btn btn-outline-warning btn-lg rounded-0 p-auto mx-auto" href="/volunteer">JOIN
+          US</a>
+      </div>
+
+    </section>
+
+    <section id="vision" class="container">
+      <h2 class="text-amber text-center"> Vision / Mission</h2>
+      <div class="d-flex flex-column flex-md-row mx-3" id="vision-item-container">
+
+        <div class="vision-item me-0 me-md-3 text-center d-flex align-items-center bg-amber text-black" data-aos="flip-left">
+          To ensure every Girl/Woman is living their best life, achieving their dreams.
+        </div>
+
+        <div class="vision-item text-center d-flex align-items-center mt-2 mt-md-0 bg-amber text-black" data-aos="flip-right">
+          Empowering the Girl child and Women with the right tools to becoming self reliant through increased knowledge
+          and skills
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <section id="activities" class="bg-dark">
+    <h2 class="text-amber text-center">Projects / activities</h2>
+
+    <div id="project-timeline-container" class="container d-grid">
+
+      <div class="project-timeline" data-aos="fade-up" data-aos-duration="1000">
+
+        <div class="timeline-text timeline-component pe-3 pe-md-5 mb-5 ps-3 ps-md-0 glide">
+          <h4 class="text-break">IG GIRL TALK</h4>
+
+          <div class="d-flex align-items-center justify-content-between  d-md-none" >
+
+            <img class="carousel-prev" onclick="plusSlides(1, 0)" src="../static/assets/icons/Vector7.png" width="15" height="18" alt="">
+
+            <div class="project-carousel-img w-100 mx-2" >
+
+              <img class="Slides1" src="../static/assets/img/ig-girls-talk.png" width="100%"  alt="">
+
+              <img class="Slides1" src="../static/assets/project-img/rape/image25.png" width="100%"  alt="">
+        
+              <img class="Slides1" src="../static/assets/project-img/rape/image26.png" width="100%" alt="">
+
+
+            </div>
+
+            <img class="carousel-next" onclick="plusSlides(-1, 0)" src="../static/assets/icons/Vector6.png" width="15" height="18" alt="">
+
+          </div>
+
+          <p>The <span class="emphasized">IG GIRL TALK</span> series holds on our live instagram
+            page, where we talk about our society at large and
+            the negative and positive influence it has on the
+            female gender. We also talk on general impactful
+            topics. so far we have had two series <br>
+            (series 1.0 and 2.0).</p>
+        </div>
+
+        <div class="timeline-middle">
+          <div class="timeline-point rounded-circle"></div>
+        </div>
+
+        <div class="mw-100 timeline-img-container timeline-component ps-3 ps-md-5 mb-5 d-none d-md-block">
+          <img src="../static/assets/img/ig-girls-talk.png" alt="">
+        </div>
+
+      </div>
+
+      <div class="project-timeline">
+        <div class="timeline-text timeline-component pe-3 pe-md-5 mb-5 ps-3 ps-md-0">
+          <h4 class="text-break">CELEBRATION OF
+            THE GIRL CHILD DAY 2018
+            (DELTA STATE, WARRI.)</h4>
+            <div class="d-flex align-items-center justify-content-between  d-md-none" >
+
+              <img class="carousel-prev" onclick="plusSlides(1, 1)" src="../static/assets/icons/Vector7.png" width="15" height="18" alt="">
+  
+              <div class="project-carousel-img w-100 mx-2" >
+  
+                <img class="Slides2" src="../static/assets/project-img/2018/image13.png" width="100%"  alt="">
+          
+                <img class="Slides2" src="../static/assets/project-img/2018/image14.png" width="100%" alt="">
+  
+                <img class="Slides2" src="../static/assets/project-img/2018/image15.png" width="100%"  alt="">
+                <img class="Slides2" src="../static/assets/project-img/2018/image21.png" width="100%"  alt="">
+  
+              </div>
+  
+              <img class="carousel-next" onclick="plusSlides(-1, 1)" src="../static/assets/icons/Vector6.png" width="15" height="18" alt="">
+  
+            </div>
+          <p>As part of our goals we have chosen to always
+            celebrate the girl child with the internationally
+            recognized date. having a fun field and insighful
+            event and giving out major writting materials, like books, pen and mathset. Okpaka Secondary School, Warri,
+            Delta State was our first visit and event ever held. we gave wriiting mareials to 200 hundred students and
+            talked to over 500 students in Jss 1 and 2.</p>
+        </div>
+
+        <div class="timeline-middle">
+          <div class="timeline-point rounded-circle"></div>
+        </div>
+
+        <div class="mw-100 timeline-img-container timeline-component ps-3 ps-md-5 mb-5 d-none d-md-block">
+          <img src="../static/assets/img/timeline/girls-day-2018.png" alt="">
+        </div>
+      </div>
+
+
+      <div class="project-timeline">
+        <div class="timeline-text timeline-component pe-3 pe-md-5 mb-5 ps-3 ps-md-0">
+          <h4 class="text-break">CELEBRATION OF
+            THE GIRL CHILD DAY 2019
+            (ENUGU STATE, ENUGU.)</h4>
+            <div class="d-flex align-items-center justify-content-between  d-md-none" >
+
+              <img class="carousel-prev" onclick="plusSlides(1, 2)" src="../static/assets/icons/Vector7.png" width="15" height="18" alt="">
+  
+              <div class="project-carousel-img w-100 mx-2" >
+  
+                <img class="Slides3" src="../static/assets/project-img/2019/image10.png" width="100%"  alt="">
+          
+                <img class="Slides3" src="../static/assets/project-img/2019/image11.png" width="100%" alt="">
+  
+                <img class="Slides3" src="../static/assets/project-img/2019/image21.png" width="100%"  alt="">
+
+                <img class="Slides3" src="../static/assets/project-img/2019/image9.png" width="100%"  alt="">
+  
+  
+              </div>
+  
+              <img class="carousel-next" onclick="plusSlides(-1, 2)" src="../static/assets/icons/Vector6.png" width="15" height="18" alt="">
+  
+            </div>
+          <p>
+            Enugu welcomed us so well, with the help of our me
+            ntor, Late Dr (JP) Flora Ojukwu. The students of Queens Comprehensive Secondary School Enugu State, Enugu.
+            From Jss 1-2 class benefitted from the activities and gifts as well.
+          </p>
+        </div>
+
+        <div class="timeline-middle">
+          <div class="timeline-point rounded-circle"></div>
+        </div>
+
+        <div class="mw-100 timeline-img-container timeline-component ps-3 ps-md-5 mb-5 d-none d-md-block">
+          <img src="../static/assets/img/Group171.png" alt="">
+        </div>
+      </div>
+
+      <div class="project-timeline">
+
+        <div class="timeline-text timeline-component pe-3 pe-md-5 mb-5 ps-3 ps-md-0">
+          <h4 class="text-break">CELEBRATION OF
+            THE GIRL CHILD DAY 2020 <br>
+            (ALL STATES.)</h4>
+            <div class="d-flex align-items-center justify-content-between  d-md-none" >
+
+              <img class="carousel-prev" onclick="plusSlides(1, 3)" src="../static/assets/icons/Vector7.png" width="15" height="18" alt="">
+  
+              <div class="project-carousel-img w-100 mx-2" >
+  
+                <img class="Slides4" src="../static/assets/project-img/2020/image22.png" width="100%"  alt="">
+          
+                <img class="Slides4" src="../static/assets/project-img/2020/image23.png" width="100%" alt="">
+  
+                <img class="Slides4" src="../static/assets/project-img/2020/image24.png" width="100%"  alt="">
+  
+              </div>
+  
+              <img class="carousel-next" onclick="plusSlides(-1, 3)" src="../static/assets/icons/Vector6.png" width="15" height="18" alt="">
+  
+            </div>
+          <p class="mb-0 mb-md-initial">During the covid pandemic, we were resilient enough to organize a free online skill acquisition training. we gave certificate to participants and facilitators.
+          </p>
+        </div>
+
+        <div class="timeline-middle">
+          <div class="timeline-point rounded-circle"></div>
+        </div>
+
+        <div class="mw-100 timeline-img-container timeline-component ps-3 ps-md-5 mb-5 d-none d-md-block">
+          <img src="../static/assets/img/celebration.png" alt="">
+        </div>
+
+      </div>
+
+
+      <div class="project-timeline">
+
+        <div class="timeline-text timeline-component pe-3 pe-md-5 mb-5 ps-3 ps-md-0">
+          <h4 class="text-break">CELEBRATION OF
+            THE GIRL CHILD DAY 2021
+            (ABUJA, FCT.)</h4>
+            <div class="d-flex align-items-center justify-content-between  d-md-none" >
+
+              <img class="carousel-prev" onclick="plusSlides(1, 4)" src="../static/assets/icons/Vector7.png" width="15" height="18" alt="">
+  
+              <div class="project-carousel-img w-100 mx-2" >
+  
+                <img class="Slides5" src="../static/assets/project-img/2021/image19.png" width="100%"  alt="">
+          
+                <img class="Slides5" src="../static/assets/project-img/2021/WhatsAppImage2022-09-03.png" width="100%" alt="">
+  
+                <img class="Slides5" src="../static/assets/project-img/2021/WhatsAppImage2022-09-03at9.png" width="100%"  alt="">
+  
+              </div>
+  
+              <img class="carousel-next" onclick="plusSlides(-1, 4)" src="../static/assets/icons/Vector6.png" width="15" height="18" alt="">
+  
+            </div>
+          <p>Our team visited L.E.A Primary School, helped over 300 students with complete writing materials and also encouraged them to follow and keep pursuing their dreams. 
+          </p>
+        </div>
+
+        <div class="timeline-middle">
+          <div class="timeline-point rounded-circle"></div>
+        </div>
+
+        <div class="mw-100 timeline-img-container timeline-component ps-3 ps-md-5 mb-5 d-none d-md-block">
+          <img src="../static/assets/img/timeline/gitls-day-2021.png" alt="">
+        </div>
+
+      </div>
+
+
+      <div class="project-timeline">
+        <div class="timeline-text timeline-component pe-3 pe-md-5 ps-3 ps-md-0">
+          <h4 class="text-break">ORPHANAGE HOME VISIT
+            2022 (PORTHARCOURT
+            RIVERS STATE.)</h4>
+            <div class="d-flex align-items-center justify-content-between  d-md-none" >
+
+              <img class="carousel-prev" onclick="plusSlides(1, 5)" src="../static/assets/icons/Vector7.png" width="15" height="18" alt="">
+  
+              <div class="project-carousel-img w-100 mx-2" >
+  
+                <img class="Slides6" src="../static/assets/project-img/2022/image17.png" width="100%"  alt="">
+          
+                <img class="Slides6" src="../static/assets/project-img/2022/image18.png" width="100%" alt="">
+  
+                <img class="Slides6" src="../static/assets/project-img/2022/WhatsAppImage2022-09-03.png" width="100%"  alt="">
+  
+              </div>
+  
+              <img class="carousel-next" onclick="plusSlides(-1, 5)" src="../static/assets/icons/Vector6.png" width="15" height="18" alt="">
+  
+            </div>
+          <p>We visited the triumphant orphanage home and provided them with food stuff and basic amenities. we trained them on our to be resillient and focused. we enganged them in quiz in gave them prizes for each wins.
+          </p>
+        </div>
+
+        <div class="timeline-middle">
+          <div class="timeline-point rounded-circle"></div>
+        </div>
+
+        <div class="mw-100 timeline-img-container timeline-component d-none d-md-block ps-3 ps-md-5">
+          <img src="../static/assets/img/timeline/girls-day-2022.png" alt="">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <section id="team-preview" class="bg-dark">
+
+    <div id="sponsor-us" class="d-flex justify-content-center">
+      <a class="amber-btn btn btn-outline-warning btn-lg rounded-0 p-auto mx-auto" href="/sponsor">SPONSOR
+        US</a>
+    </div>
+    <h2 class="text-amber text-center"> Meet The Team</h2>
+
+    <div class="container">
+      <div class="carousel glider-contain d-flex justify-content-around align-items-center position-relative">
+
+        <div id="left-arrow " class="glider-prev position-absolute ms-2">
+          <img src="../static/assets/icons/bi_arrow-left.svg" alt="">
+        </div>
+        <div class="carousel-img glider">
+          <div class="p-0 m-0 d-flex flex-column justify-content-center">
+            <img  id="sofia-enoch-img" class="mx-auto" src="../static/assets/team-image/sofia-enoch.png" width="509px" height="auto" alt="">
+            <div id="carousel-text" class="text-center glider">
+              <h4 class="m-0">Sophia Onyeka Enoch</h4>
+              <p class="m-0">Team Lead</p>
+            </div>
+          </div>
+          <div class="p-0 m-0 d-flex flex-column justify-content-center">
+            <img class="mx-auto" src="../static/assets/team-image/Tochi.png" width="408px" height="auto" alt="">
+            <div id="carousel-text" class="text-center glider">
+              <h4 class="m-0">Tochi Madueke</h4>
+              <p class="m-0">Admin/ Finance Manager</p>
+            </div>
+          </div>
+          <div class="p-0 m-0 d-flex flex-column justify-content-center">
+            <img class="mx-auto" src="../static/assets/team-image/jenifer.png" width="429px" height="auto" alt="">
+            <div id="carousel-text" class="text-center glider">
+              <h4 class="m-0">Jennifer Oliko</h4>
+              <p class="m-0">Co-Founder</p>
+            </div>
+          </div>
+          <div class="p-0 m-0 d-flex flex-column justify-content-center">
+            <img class="mx-auto" src="../static/assets/team-image/obiageli.png" width="446px" height="auto" alt="">
+            <div id="carousel-text" class="text-center glider">
+              <h4 class="m-0">Obiageli Iloakasia</h4>
+              <p class="m-0">Programs Manager</p>
+            </div>
+          </div>
+          <div class="p-0 m-0 d-flex flex-column justify-content-center">
+            <img class="mx-auto" src="../static/assets/team-image/sophia-Joshua.png" width="452px" height="auto" alt="">
+            <div id="carousel-text" class="text-center glider">
+              <h4 class="m-0">Sophia Joshua</h4>
+              <p class="m-0">Communications Manager</p>
+            </div>
+          </div>
+        
+        </div>
+
+        <div id="right-arrow " class="glider-next position-absolute me-2">
+          <img src="../static/assets/icons/bi_arrow-right.svg" alt="">
+        </div>
+
+      </div>
+
+
+      <div id="carousel-navigation" class="text-center dots">
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="contact-form-section" class="bg-dark">
+    <h2 class="text-center text-amber">Contact Us</h2>
+
+    <div class="container">
+      <div class="row ">
+
+        <div id="illustration" class="bg-black col-12 col-md d-flex flex-column mx-md-5">
+
+          <img src="../static/assets/img/contact-illustration.png" width="320px" height="219px" alt="">
+          
+
+          <div class="my-auto">
+            <ul class="list-group">
+              <li class="list-group-item bg-black">
+                <img src="../static/assets/icons/telephone.png" alt="" width="40px" height="38px">
+                <a  href="tel:+2349023888330">09023888330</a>
+              </li>
+              <li class="list-group-item bg-black">
+                <img src="../static/assets/icons/email.png" alt="" width="40px" height="30px">
+                <a  href="mailto:womwngoalsss@gmail.com">womwngoalsss@gmail.com</a>
+              </li>
+              <li class="list-group-item bg-black">
+                <img src="../static/assets/icons/website.png" alt="" width="42px" height="42px">
+                <a  href="w.w.w.womengoal.com">w.w.w.womengoal.com</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div id="contact-form" class="col-12 col-md mx-1 mt-4 mt-md-0">
+          <p>You’ll get a reply in less than two (2) hours</p>
+
+
+          <form action="/" method="POST" role="form">
+
+            <div class="form-group">
+              <label for="username">Fullname</label>
+              <input type="text" name="username" required class="form-control text-white rounded-0 bg-dark border-white " id="username">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" name="email" required class="form-control text-white rounded-0 bg-dark border-white " id="email">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Leave a Message</label>
+              <textarea name="message" id="input" required class="form-control text-white rounded-0 bg-dark border-white " rows="3"
+                required="required"></textarea>
+
+            </div>
+
+
+            <div class="text-center text-md-end">
+              <button type="submit" class="btn-submit btn btn-outline-warning rounded-0">SEND MESSAGE</button>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  
+
+  <footer class="bg-dark border-top">
+    <div class="container d-md-flex flex-wrap justify-content-between align-items-center py-3">
+      
+      <p class="col-md-4 mb-3 mb-md-0 text-center text-md-start">
+        <img src="..\static\assets\img\women-goals-icon.png" alt="Logo" width="45" height="45">
+      </p>
+
+    <p class="col-md-4 d-flex align-items-center justify-content-center mb-0 me-md-auto text-decoration-none">
+      Copyright, Womengoals 2022.
+    </p>
+
+    <ul id="footer-links" class="nav col-md-4 d-flex justify-content-center justify-content-md-end mb-5 mb-md-0">
+      <li class="nav-item">
+        <a href="https://www.linkedin.com/groups/9248022" target="_blank" class="nav-link px-2 text-muted">
+        <img src="../static/assets/icons/linkedin-icon.png" alt="linkedin-link">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="https://www.instagram.com/women_goals_initiative/" target="_blank" class="nav-link px-2 text-muted">
+        <img src="../static/assets/icons/instagram.png" alt="instagram-link">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="https://web.facebook.com/womengoal/" target="_blank" class="nav-link px-2 text-muted">
+        <img src="../static/assets/icons/facebok-icon.png" alt="facebok-link">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link px-2 text-muted" target="_blank">
+        <img src="../static/assets/icons/youtube-icon.png" alt="youtube link`">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="https://twitter.com/womengoals2?s=21&t=mZV_Fe4GYXUnBdQeKfZQdQ" target="_blank" class="nav-link px-2 text-muted">
+        <img src="../static/assets/icons/twitter-icon.png" alt="twitter-link">
+        </a>
+      </li>
+    </ul>
+    </div>
+  </footer>
+
+  
+  <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+  <script src="../static/aos/aos.js"></script>
+  <script>
+      const timelineProject = document.getElementsByClassName('timeline-component');
+
+      for (let i = 0; i < timelineProject.length; i++) {
+        const element = timelineProject[i];
+
+        element.setAttribute('data-aos', 'fade-up') 
+        element.setAttribute('data-aos-duration', '1000')
+        // element.lastChild.setAttribute('data-aos', 'fade-up')
+        // element.lastChild.setAttribute('data-aos-duration', '1000')
+        
+      }
+      AOS.init();
+
+  </script>
+  <script src="../static/js/slides.js"></script>
+
+
+</body>
+
+</html>
